@@ -24,6 +24,7 @@ class _DropDownSearchPageState extends State<DropDownSearchPage> {
         child: DropdownSearch<String>(
           popupProps: const PopupProps.menu(
             showSelectedItems: true,
+            showSearchBox: true,
             //disabledItemFn: (String s) => s.startsWith('I'),
           ),
           items: widget.lists,
