@@ -3,7 +3,11 @@ import 'package:training_flutter/form/constants/constantspage.dart';
 import 'package:training_flutter/form/formbody/formfield/formfieldrow.dart';
 
 class FirstContainerPage extends StatefulWidget {
-  const FirstContainerPage({Key? key}) : super(key: key);
+  final int rowValue;
+  final int startValue;
+  const FirstContainerPage(
+      {Key? key, required this.rowValue, required this.startValue})
+      : super(key: key);
 
   @override
   State<FirstContainerPage> createState() => _FirstContainerPageState();
@@ -18,7 +22,7 @@ class _FirstContainerPageState extends State<FirstContainerPage> {
       // padding: EdgeInsets.symmetric(
       //     vertical: height * bankHeadPaddingHeight,
       //     horizontal: width * bankHeadPaddingWidth),
-      height: height * bankContainerHeight * 5,
+      height: height * bankContainerHeight * widget.rowValue,
       width: width * bankContainerWidth,
       decoration: BoxDecoration(
         color: containerColor,

@@ -3,7 +3,6 @@ import 'package:training_flutter/form/bankpage/formbody/addbankbuttons.dart';
 import 'package:training_flutter/form/bankpage/formbody/firstcontainer.dart';
 import 'package:training_flutter/form/bankpage/formbody/secondcontainer.dart';
 import 'package:training_flutter/form/constants/constantspage.dart';
-import 'package:training_flutter/form/formbody/formfield/formbuttonpage.dart';
 
 class FormPage extends StatefulWidget {
   const FormPage({Key? key}) : super(key: key);
@@ -22,11 +21,11 @@ class _FormPageState extends State<FormPage> {
       key: formKey,
       child: Column(
         children: [
-          const FirstContainerPage(),
+          const FirstContainerPage(rowValue: 5, startValue: 0),
           SizedBox(
             height: height * containerSpaceHeight,
           ),
-          const SecondContainerPage(),
+          const SecondContainerPage(rowValue: 4, startValue: 9),
           SizedBox(
             height: height * containerSpaceHeight,
           ),
